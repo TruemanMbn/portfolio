@@ -1,11 +1,28 @@
+import Navbar from "./components/layout/Navbar";
+
 function App() {
   return (
-    <main className="min-h-screen bg-slate-950 flex items-center justify-center">
-      <h1 className="text-5xl font-bold text-cyan-400">
-        Portfolio Coming Soon 🚀
-      </h1>
-    </main>
-  )
+    <div className="bg-slate-950 text-white min-h-screen">
+      <Navbar />
+
+      <main className="pt-24">
+        <section
+          id="home"
+          className="flex min-h-screen items-center justify-center"
+        >
+          <div className="text-center">
+            <h1 className="text-6xl font-extrabold">
+              Mpumelelo Mbonambi
+            </h1>
+
+            <p className="mt-6 text-2xl text-slate-300">
+              Software Engineer • Full Stack Developer
+            </p>
+          </div>
+        </section>
+      </main>
+    </div>
+  );
 }
 
-export default App
+export default App;
