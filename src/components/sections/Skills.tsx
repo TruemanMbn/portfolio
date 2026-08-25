@@ -1,30 +1,24 @@
 const skillGroups = [
   {
     title: "Languages",
-    skills: ["Java", "C#", "Python", "TypeScript", "C++", "SQL"],
+    skills: ["Java", "Python", "C#", "C++", "TypeScript", "HTML", "CSS"],
   },
   {
     title: "Frontend",
-    skills: ["React", "TypeScript", "HTML", "CSS", "Tailwind CSS", "Vite"],
+    skills: ["React", "TypeScript", "Vite", "Tailwind CSS"],
   },
   {
     title: "Backend",
-    skills: [
-      "ASP.NET Core",
-      "REST APIs",
-      "Spring Boot",
-      "Entity Framework Core",
-      "Javalin",
-    ],
+    skills: ["ASP.NET Core", "Spring Boot", "REST APIs", "Entity Framework"],
   },
   {
     title: "Databases & Data",
     skills: [
       "PostgreSQL",
-      "SQLite",
       "SQL",
+      "SQLite",
       "Power BI",
-      "Big Data Analytics",
+      "Data Analysis",
       "Data Visualization",
     ],
   },
@@ -33,8 +27,8 @@ const skillGroups = [
     skills: [
       "Unit Testing",
       "Acceptance Testing",
-      "JUnit",
       "Vitest",
+      "JUnit",
       "Selenium",
       "WebDriverManager",
     ],
@@ -57,22 +51,25 @@ function Skills() {
     <section id="skills" className="bg-slate-950 py-24 text-white">
       <div className="mx-auto max-w-6xl px-6">
 
-        <div className="mx-auto max-w-3xl text-center">
-          <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-cyan-400">
+        {/* Heading */}
+        <div className="mb-14 text-center">
+          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-cyan-400">
             Technical Skills
           </p>
 
-          <h2 className="mb-6 text-4xl font-bold md:text-5xl">
+          <h2 className="text-4xl font-bold md:text-5xl">
             Technologies I Work With
           </h2>
 
-          <p className="text-lg leading-8 text-slate-400">
-            A growing set of technologies and engineering practices I've
-            developed through coursework, training, and hands-on projects.
+          <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-slate-400">
+            A selection of the languages, frameworks, tools, and
+            technologies I've worked with through my studies, training,
+            and software projects.
           </p>
         </div>
 
-        <div className="mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        {/* Skill Groups */}
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
 
           {skillGroups.map((group) => (
             <div
@@ -87,7 +84,7 @@ function Skills() {
                 {group.skills.map((skill) => (
                   <span
                     key={skill}
-                    className="rounded-full bg-slate-800 px-3 py-2 text-sm text-slate-300"
+                    className="rounded-lg border border-slate-700 bg-slate-800 px-3 py-2 text-sm text-slate-300 transition hover:border-cyan-400 hover:text-white"
                   >
                     {skill}
                   </span>

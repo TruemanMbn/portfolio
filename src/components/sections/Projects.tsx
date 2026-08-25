@@ -32,77 +32,89 @@ const projects = [
 
 function Projects() {
   return (
-    <section id="projects" className="bg-slate-900 py-24 text-white">
+    <section id="projects" className="bg-slate-950 py-24 text-white">
       <div className="mx-auto max-w-6xl px-6">
 
-        <div className="mx-auto max-w-3xl text-center">
-          <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-cyan-400">
+        {/* Heading */}
+        <div className="mb-14 text-center">
+          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-cyan-400">
             Projects
           </p>
 
-          <h2 className="mb-6 text-4xl font-bold md:text-5xl">
+          <h2 className="text-4xl font-bold md:text-5xl">
             Things I've Built
           </h2>
 
-          <p className="text-lg leading-8 text-slate-400">
-            A selection of projects that demonstrate my software development,
-            problem-solving, testing, and engineering skills.
+          <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-slate-400">
+            A selection of projects that demonstrate my experience with
+            software development, backend systems, databases, testing,
+            and modern web technologies.
           </p>
         </div>
 
-        <div className="mx-auto mt-16 grid max-w-5xl gap-8 md:grid-cols-2">
+        {/* Project Cards */}
+        <div className="grid gap-8 md:grid-cols-2">
 
           {projects.map((project) => (
             <article
               key={project.title}
-              className="flex flex-col rounded-2xl border border-slate-800 bg-slate-950 p-8 shadow-lg transition duration-300 hover:-translate-y-2 hover:border-cyan-400"
+              className="group flex flex-col overflow-hidden rounded-2xl border border-slate-800 bg-slate-900 transition duration-300 hover:-translate-y-2 hover:border-cyan-400"
             >
-              <div className="mb-6">
-                <span className="text-sm font-semibold text-cyan-400">
-                  Featured Project
-                </span>
 
-                <h3 className="mt-2 text-3xl font-bold">
+              {/* Project Header */}
+              <div className="flex h-48 items-center justify-center border-b border-slate-800 bg-slate-800">
+                <span className="text-sm font-medium uppercase tracking-widest text-slate-500 transition group-hover:text-cyan-400">
+                  {project.title}
+                </span>
+              </div>
+
+              {/* Content */}
+              <div className="flex flex-1 flex-col p-7">
+
+                <h3 className="text-2xl font-bold">
                   {project.title}
                 </h3>
-              </div>
 
-              <p className="mb-6 flex-grow leading-8 text-slate-300">
-                {project.description}
-              </p>
+                <p className="mt-4 leading-8 text-slate-400">
+                  {project.description}
+                </p>
 
-              <div className="mb-8 flex flex-wrap gap-2">
-                {project.tech.map((tech) => (
-                  <span
-                    key={tech}
-                    className="rounded-full bg-slate-800 px-3 py-2 text-sm text-slate-300"
-                  >
-                    {tech}
-                  </span>
-                ))}
-              </div>
+                {/* Technologies */}
+                <div className="mt-6 flex flex-wrap gap-2">
+                  {project.tech.map((tech) => (
+                    <span
+                      key={tech}
+                      className="rounded-full border border-slate-700 bg-slate-800 px-3 py-1.5 text-sm text-slate-300"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
 
-              <div className="flex flex-wrap gap-3">
+                {/* Links */}
+                <div className="mt-auto flex gap-3 pt-8">
 
-                <a
-                  href={project.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="rounded-lg bg-cyan-500 px-5 py-2.5 font-semibold text-slate-950 transition hover:bg-cyan-400"
-                >
-                  View GitHub
-                </a>
-
-                {project.demo !== "#" && (
                   <a
-                    href={project.demo}
+                    href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="rounded-lg border border-slate-700 px-5 py-2.5 font-semibold transition hover:border-cyan-400 hover:text-cyan-400"
+                    className="rounded-lg bg-cyan-500 px-5 py-2.5 font-semibold text-slate-950 transition hover:bg-cyan-400"
                   >
-                    Live Demo
+                    GitHub
                   </a>
-                )}
+
+                  {project.demo !== "#" && (
+                    <a
+                      href={project.demo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="rounded-lg border border-slate-700 px-5 py-2.5 font-semibold text-white transition hover:border-cyan-400 hover:text-cyan-400"
+                    >
+                      Live Demo
+                    </a>
+                  )}
+
+                </div>
 
               </div>
             </article>

@@ -2,48 +2,76 @@ function Hero() {
   return (
     <section
       id="home"
-      className="flex min-h-screen items-center bg-slate-950 text-white"
+      className="flex min-h-screen items-center bg-slate-950 pt-24 text-white"
     >
-      <div className="mx-auto w-full max-w-7xl px-6 py-24">
+      <div className="mx-auto w-full max-w-7xl px-6 py-20">
         <div className="max-w-4xl">
 
-          <p className="mb-4 text-lg font-semibold text-cyan-400">
+          {/* Introduction */}
+          <p className="mb-4 text-sm font-semibold uppercase tracking-[0.25em] text-cyan-400">
             Software Engineer
           </p>
 
-          <h1 className="text-5xl font-bold leading-tight md:text-7xl">
-            Hi, I'm{" "}
-            <span className="text-cyan-400">
-              Mpumelelo Mbonambi
+          {/* Name */}
+          <h1 className="text-5xl font-bold leading-tight tracking-tight md:text-7xl">
+            Mpumelelo
+            <span className="block text-cyan-400">
+              Mbonambi
             </span>
           </h1>
 
-          <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300 md:text-xl">
-            Computer Science and IT graduate passionate about building
-            reliable software, backend systems, APIs, and practical
-            full-stack applications.
+          {/* Description */}
+          <p className="mt-8 max-w-2xl text-lg leading-8 text-slate-400 md:text-xl">
+            Computer Science and Information Technology graduate with a
+            growing focus on software engineering, backend development,
+            full-stack applications, and data-driven solutions.
           </p>
 
-          <p className="mt-4 max-w-2xl leading-7 text-slate-400">
-            Currently developing my software engineering skills through
-            hands-on projects involving React, TypeScript, C#, ASP.NET Core,
-            Java, Python, SQL, Docker, and automated testing.
-          </p>
-
-          <div className="mt-10 flex flex-wrap gap-4">
+          {/* Actions */}
+          <div className="mt-10 flex flex-col gap-4 sm:flex-row">
 
             <a
               href="#projects"
-              className="rounded-lg bg-cyan-500 px-6 py-3 font-semibold text-slate-950 transition hover:bg-cyan-400"
+              className="rounded-lg bg-cyan-500 px-7 py-3 text-center font-semibold text-slate-950 transition hover:bg-cyan-400"
             >
               View My Projects
             </a>
 
             <a
               href="#contact"
-              className="rounded-lg border border-slate-700 px-6 py-3 font-semibold text-white transition hover:border-cyan-400 hover:text-cyan-400"
+              className="rounded-lg border border-slate-700 px-7 py-3 text-center font-semibold text-white transition hover:border-cyan-400 hover:text-cyan-400"
             >
               Get In Touch
+            </a>
+
+          </div>
+
+          {/* Quick Links */}
+          <div className="mt-12 flex gap-6 text-sm text-slate-500">
+
+            <a
+              href="https://github.com/TruemanMbn"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition hover:text-cyan-400"
+            >
+              GitHub
+            </a>
+
+            <a
+              href="https://linkedin.com/in/trueman-mpumelelo-mbonambi-9b732323b"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition hover:text-cyan-400"
+            >
+              LinkedIn
+            </a>
+
+            <a
+              href="mailto:truemanmbn@gmail.com"
+              className="transition hover:text-cyan-400"
+            >
+              Email
             </a>
 
           </div>
