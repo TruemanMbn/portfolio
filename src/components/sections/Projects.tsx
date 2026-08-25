@@ -11,7 +11,7 @@ const projects = [
       "Docker",
     ],
     github: "https://github.com/TruemanMbn/plan4salary",
-    demo: "#",
+    demo: null,
   },
   {
     title: "Password Generator",
@@ -23,7 +23,7 @@ const projects = [
       "Web Crypto API",
       "HTML",
       "CSS",
-      "Testing",
+      "Vitest",
     ],
     github: "https://github.com/TruemanMbn/Password-Generator",
     demo: "https://password-generator-sepia-two.vercel.app/",
@@ -46,32 +46,48 @@ function Projects() {
           </h2>
 
           <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-slate-400">
-            A selection of projects that demonstrate my experience with
-            software development, backend systems, databases, testing,
-            and modern web technologies.
+            Practical projects where I've applied software engineering
+            concepts, modern technologies, and problem-solving skills.
           </p>
         </div>
 
-        {/* Project Cards */}
+        {/* Projects */}
         <div className="grid gap-8 md:grid-cols-2">
 
-          {projects.map((project) => (
+          {projects.map((project, index) => (
             <article
               key={project.title}
-              className="group flex flex-col overflow-hidden rounded-2xl border border-slate-800 bg-slate-900 transition duration-300 hover:-translate-y-2 hover:border-cyan-400"
+              className="group flex flex-col overflow-hidden rounded-2xl border border-slate-800 bg-slate-900 transition duration-300 hover:-translate-y-2 hover:border-cyan-400/70 hover:shadow-2xl hover:shadow-cyan-500/5"
             >
 
-              {/* Project Header */}
-              <div className="flex h-48 items-center justify-center border-b border-slate-800 bg-slate-800">
-                <span className="text-sm font-medium uppercase tracking-widest text-slate-500 transition group-hover:text-cyan-400">
-                  {project.title}
-                </span>
+              {/* Project Preview */}
+              <div className="relative flex h-52 items-center justify-center overflow-hidden bg-gradient-to-br from-slate-800 to-slate-900">
+
+                {/* Decorative grid */}
+                <div className="absolute inset-0 opacity-20">
+                  <div className="h-full w-full bg-[linear-gradient(to_right,#334155_1px,transparent_1px),linear-gradient(to_bottom,#334155_1px,transparent_1px)] bg-[size:32px_32px]" />
+                </div>
+
+                {/* Number */}
+                <div className="relative">
+                  <span className="text-7xl font-black text-slate-800 transition duration-500 group-hover:text-cyan-500/20">
+                    0{index + 1}
+                  </span>
+                </div>
+
+                {/* Project label */}
+                <div className="absolute bottom-5 left-6">
+                  <span className="rounded-full border border-slate-700 bg-slate-950/80 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-cyan-400">
+                    Featured Project
+                  </span>
+                </div>
+
               </div>
 
               {/* Content */}
               <div className="flex flex-1 flex-col p-7">
 
-                <h3 className="text-2xl font-bold">
+                <h3 className="text-2xl font-bold transition group-hover:text-cyan-400">
                   {project.title}
                 </h3>
 
@@ -103,7 +119,7 @@ function Projects() {
                     GitHub
                   </a>
 
-                  {project.demo !== "#" && (
+                  {project.demo && (
                     <a
                       href={project.demo}
                       target="_blank"
