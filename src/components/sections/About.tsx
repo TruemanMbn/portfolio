@@ -1,48 +1,79 @@
 function About() {
   return (
-    <section
-      id="about"
-      className="bg-slate-900 py-24 text-white"
-    >
+    <section id="about" className="bg-slate-900 py-24 text-white">
       <div className="mx-auto max-w-6xl px-6">
-        <h2 className="mb-12 text-center text-4xl font-bold">
-          About Me
-        </h2>
 
-        <div className="grid gap-12 md:grid-cols-2">
-          <div>
-            <h3 className="mb-4 text-2xl font-semibold text-cyan-400">
-              Who I Am
-            </h3>
+        <div className="mx-auto max-w-3xl text-center">
 
-            <p className="leading-8 text-slate-300">
-              I'm a Software Engineer passionate about building reliable,
-              scalable, and user-friendly applications. I enjoy transforming
-              ideas into practical software solutions and continuously learning
-              new technologies to improve my craft.
-            </p>
+          <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-cyan-400">
+            About Me
+          </p>
 
-            <p className="mt-6 leading-8 text-slate-300">
-              My interests include full-stack web development, backend systems,
-              cloud technologies, and creating software that solves real-world
-              problems.
-            </p>
-          </div>
+          <h2 className="mb-8 text-4xl font-bold md:text-5xl">
+            Building software with purpose
+          </h2>
 
-          <div className="rounded-xl border border-slate-700 bg-slate-800 p-8">
-            <h3 className="mb-6 text-2xl font-semibold text-cyan-400">
-              Quick Facts
-            </h3>
+          <p className="mb-6 text-lg leading-8 text-slate-300">
+            I'm a Computer Science and Information Technology graduate with
+            a strong interest in software engineering and application
+            development. I enjoy turning ideas into practical software
+            solutions and continuously improving my development skills
+            through hands-on projects.
+          </p>
 
-            <ul className="space-y-4 text-slate-300">
-              <li>🎓 BSc Computer Science & Information Technology</li>
-              <li>🏫 WeThinkCode_ Software Engineering Programme</li>
-              <li>💼 Aspiring Full Stack Software Engineer</li>
-              <li>🌍 Durban, South Africa</li>
-              <li>💻 Passionate about building impactful software</li>
-            </ul>
-          </div>
+          <p className="mb-6 text-lg leading-8 text-slate-300">
+            My experience spans frontend and backend development, REST APIs,
+            databases, data analytics, testing, and containerized
+            applications. I've worked with technologies including React,
+            TypeScript, C#, ASP.NET Core, Java, Python, PostgreSQL, Docker,
+            and Git.
+          </p>
+
+          <p className="text-lg leading-8 text-slate-300">
+            I'm particularly interested in writing clean, maintainable code,
+            understanding how systems work, and building reliable software
+            that solves real problems.
+          </p>
+
         </div>
+
+        <div className="mt-16 grid gap-6 md:grid-cols-3">
+
+          <div className="rounded-2xl border border-slate-800 bg-slate-950 p-6 text-center">
+            <h3 className="mb-2 text-xl font-semibold text-cyan-400">
+              Software Development
+            </h3>
+
+            <p className="leading-7 text-slate-400">
+              Building full-stack applications, backend services, and REST
+              APIs using modern development technologies.
+            </p>
+          </div>
+
+          <div className="rounded-2xl border border-slate-800 bg-slate-950 p-6 text-center">
+            <h3 className="mb-2 text-xl font-semibold text-cyan-400">
+              Data & Databases
+            </h3>
+
+            <p className="leading-7 text-slate-400">
+              Working with SQL, PostgreSQL, data analysis, visualization,
+              and database-driven applications.
+            </p>
+          </div>
+
+          <div className="rounded-2xl border border-slate-800 bg-slate-950 p-6 text-center">
+            <h3 className="mb-2 text-xl font-semibold text-cyan-400">
+              Testing & Quality
+            </h3>
+
+            <p className="leading-7 text-slate-400">
+              Applying unit testing, acceptance testing, and automated
+              browser testing to improve software quality.
+            </p>
+          </div>
+
+        </div>
+
       </div>
     </section>
   );

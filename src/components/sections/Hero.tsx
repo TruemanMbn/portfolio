@@ -2,55 +2,52 @@ function Hero() {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center bg-slate-950 text-white"
+      className="flex min-h-screen items-center bg-slate-950 text-white"
     >
-      <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-12 px-6 md:flex-row">
-        {/* Left Side */}
-        <div className="max-w-2xl">
-          <p className="mb-4 text-cyan-400 text-lg">
-            Hello, I'm
+      <div className="mx-auto w-full max-w-7xl px-6 py-24">
+        <div className="max-w-4xl">
+
+          <p className="mb-4 text-lg font-semibold text-cyan-400">
+            Software Engineer
           </p>
 
-          <h1 className="text-5xl font-extrabold leading-tight md:text-7xl">
-            Mpumelelo
-            <br />
-            Mbonambi
+          <h1 className="text-5xl font-bold leading-tight md:text-7xl">
+            Hi, I'm{" "}
+            <span className="text-cyan-400">
+              Mpumelelo Mbonambi
+            </span>
           </h1>
 
-          <h2 className="mt-6 text-2xl font-semibold text-slate-300">
-            Software Engineer & Full Stack Developer
-          </h2>
+          <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300 md:text-xl">
+            Computer Science and IT graduate passionate about building
+            reliable software, backend systems, APIs, and practical
+            full-stack applications.
+          </p>
 
-          <p className="mt-6 text-lg leading-8 text-slate-400">
-            Passionate about building scalable software, creating intuitive user
-            experiences, and solving real-world problems with modern
-            technologies.
+          <p className="mt-4 max-w-2xl leading-7 text-slate-400">
+            Currently developing my software engineering skills through
+            hands-on projects involving React, TypeScript, C#, ASP.NET Core,
+            Java, Python, SQL, Docker, and automated testing.
           </p>
 
           <div className="mt-10 flex flex-wrap gap-4">
+
             <a
               href="#projects"
               className="rounded-lg bg-cyan-500 px-6 py-3 font-semibold text-slate-950 transition hover:bg-cyan-400"
             >
-              View Projects
+              View My Projects
             </a>
 
             <a
               href="#contact"
-              className="rounded-lg border border-cyan-500 px-6 py-3 font-semibold text-cyan-400 transition hover:bg-cyan-500 hover:text-slate-950"
+              className="rounded-lg border border-slate-700 px-6 py-3 font-semibold text-white transition hover:border-cyan-400 hover:text-cyan-400"
             >
-              Contact Me
+              Get In Touch
             </a>
-          </div>
-        </div>
 
-        {/* Right Side */}
-        <div className="flex justify-center">
-          <img
-            src="https://via.placeholder.com/350"
-            alt="Mpumelelo Mbonambi"
-            className="h-80 w-80 rounded-full border-4 border-cyan-500 object-cover shadow-2xl"
-          />
+          </div>
+
         </div>
       </div>
     </section>

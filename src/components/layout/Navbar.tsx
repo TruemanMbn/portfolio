@@ -26,18 +26,13 @@ function Navbar() {
               Skills
             </a>
           </li>
-
+          
           <li>
-            <a href="#projects" className="hover:text-cyan-400 transition">
-              Projects
+            <a href="#education" className="hover:text-cyan-400 transition">
+              Education
             </a>
           </li>
 
-          <li>
-            <a href="#contact" className="hover:text-cyan-400 transition">
-              Contact
-            </a>
-          </li>
         </ul>
 
         {/* CV Button */}
