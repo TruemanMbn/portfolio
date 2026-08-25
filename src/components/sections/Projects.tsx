@@ -1,34 +1,4 @@
-const projects = [
-  {
-    title: "Plan4Salary",
-    description:
-      "A personal budgeting application designed to help users plan their salary, manage expenses, and understand their monthly finances.",
-    tech: [
-      "React",
-      "TypeScript",
-      "ASP.NET Core",
-      "PostgreSQL",
-      "Docker",
-    ],
-    github: "https://github.com/TruemanMbn/plan4salary",
-    demo: null,
-  },
-  {
-    title: "Password Generator",
-    description:
-      "A secure password generator that creates strong, customizable passwords using the browser's cryptographically secure random API, with automated tests.",
-    tech: [
-      "TypeScript",
-      "Vite",
-      "Web Crypto API",
-      "HTML",
-      "CSS",
-      "Vitest",
-    ],
-    github: "https://github.com/TruemanMbn/Password-Generator",
-    demo: "https://password-generator-sepia-two.vercel.app/",
-  },
-];
+import { projects } from "../../data/projects";
 
 function Projects() {
   return (
@@ -97,7 +67,7 @@ function Projects() {
 
                 {/* Technologies */}
                 <div className="mt-6 flex flex-wrap gap-2">
-                  {project.tech.map((tech) => (
+                  {project.technologies.map((tech) => (
                     <span
                       key={tech}
                       className="rounded-full border border-slate-700 bg-slate-800 px-3 py-1.5 text-sm text-slate-300"

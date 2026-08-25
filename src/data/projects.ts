@@ -8,69 +8,31 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    title: "ChurchPulse",
+    title: "Plan4Salary",
     description:
-      "A full-stack church management system for member registration, ministry management, dashboards, reporting, and secure JWT authentication.",
+      "A personal budgeting application designed to help users plan their salary, manage expenses, and understand their monthly finances.",
     technologies: [
       "React",
       "TypeScript",
       "ASP.NET Core",
       "PostgreSQL",
-      "Entity Framework",
-      "JWT",
+      "Docker",
     ],
-    github: "https://github.com/TruemanMbn/ChurchPulse",
+    github: "https://github.com/TruemanMbn/plan4salary",
   },
-
   {
-    title: "Penalty Shootout Game",
+    title: "Password Generator",
     description:
-      "A responsive football penalty shootout game built with TypeScript and modern frontend tooling.",
+      "A secure password generator that creates strong, customizable passwords using the browser's cryptographically secure random API, with automated tests.",
     technologies: [
       "TypeScript",
+      "Vite",
+      "Web Crypto API",
       "HTML",
       "CSS",
-      "Vite",
+      "Vitest",
     ],
-    github: "https://github.com/TruemanMbn/penalty-shootout-game",
-  },
-
-  {
-    title: "Robot World API",
-    description:
-      "REST API for controlling robots inside a virtual world with obstacle management and persistent storage.",
-    technologies: [
-      "Java",
-      "Javalin",
-      "SQLite",
-      "REST API",
-    ],
-    github: "https://github.com/TruemanMbn",
-  },
-
-  {
-    title: "Spam Detection",
-    description:
-      "Machine learning project that classifies spam messages using Python and data analysis techniques.",
-    technologies: [
-      "Python",
-      "Machine Learning",
-      "Pandas",
-    ],
-    github: "https://github.com/TruemanMbn",
-  },
-
-  {
-    title: "Data Engineering Pipeline",
-    description:
-      "Data ingestion and processing pipeline using Apache Beam, Docker, PostgreSQL and Redpanda.",
-    technologies: [
-      "Python",
-      "Apache Beam",
-      "Docker",
-      "PostgreSQL",
-      "Redpanda",
-    ],
-    github: "https://github.com/TruemanMbn",
+    github: "https://github.com/TruemanMbn/Password-Generator",
+    demo: "https://password-generator-sepia-two.vercel.app/",
   },
 ];
