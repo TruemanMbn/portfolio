@@ -4,7 +4,7 @@ const education = [
     qualification: "BSc Computer Science & Information Technology",
     period: "Completed",
     description:
-      "Developed a strong foundation in computer science and information technology, including software development, algorithms, databases, networking, operating systems, and software engineering.",
+      "Built a strong foundation in computer science and information technology, including software development, algorithms, databases, networking, operating systems, and software engineering.",
   },
   {
     institution: "WeThinkCode_",
@@ -18,7 +18,7 @@ const education = [
     qualification: "Big Data Analytics",
     period: "Completed",
     description:
-      "Developed practical skills in data analytics, SQL, Power BI, data visualization, data interpretation, and using data to support informed decision-making.",
+      "Developed practical skills in data analytics, SQL, Power BI, data visualization, data interpretation, and data-driven decision-making.",
   },
 ];
 
@@ -28,7 +28,7 @@ function Education() {
       <div className="mx-auto max-w-6xl px-6">
 
         {/* Heading */}
-        <div className="mb-14 text-center">
+        <div className="mb-16 text-center">
           <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-cyan-400">
             Education
           </p>
@@ -39,42 +39,57 @@ function Education() {
 
           <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-slate-400">
             My academic background and professional training have given me
-            a strong foundation for building practical software solutions.
+            a foundation for building practical software solutions.
           </p>
         </div>
 
-        {/* Education Cards */}
-        <div className="mx-auto max-w-4xl space-y-6">
+        {/* Timeline */}
+        <div className="relative mx-auto max-w-4xl">
 
-          {education.map((item) => (
-            <div
-              key={item.institution}
-              className="group rounded-2xl border border-slate-800 bg-slate-950 p-7 transition duration-300 hover:-translate-y-1 hover:border-cyan-400 md:p-8"
-            >
-              <div className="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
+          {/* Timeline Line */}
+          <div className="absolute left-3 top-0 hidden h-full w-px bg-slate-800 md:block" />
 
-                <div>
-                  <h3 className="text-2xl font-bold text-white">
-                    {item.qualification}
-                  </h3>
+          <div className="space-y-10">
 
-                  <p className="mt-2 text-lg font-medium text-cyan-400">
-                    {item.institution}
+            {education.map((item) => (
+              <div
+                key={item.institution}
+                className="relative md:pl-12"
+              >
+
+                {/* Timeline Dot */}
+                <div className="absolute left-0 top-8 hidden h-7 w-7 items-center justify-center rounded-full border-4 border-slate-900 bg-cyan-500 md:flex" />
+
+                {/* Card */}
+                <div className="rounded-2xl border border-slate-800 bg-slate-950 p-7 transition duration-300 hover:-translate-y-1 hover:border-cyan-400 md:p-8">
+
+                  <div className="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
+
+                    <div>
+                      <p className="text-sm font-semibold uppercase tracking-wider text-cyan-400">
+                        {item.institution}
+                      </p>
+
+                      <h3 className="mt-2 text-2xl font-bold">
+                        {item.qualification}
+                      </h3>
+                    </div>
+
+                    <span className="w-fit rounded-full border border-slate-700 bg-slate-900 px-4 py-1.5 text-sm font-medium text-slate-400">
+                      {item.period}
+                    </span>
+
+                  </div>
+
+                  <p className="mt-5 leading-8 text-slate-400">
+                    {item.description}
                   </p>
+
                 </div>
-
-                <span className="w-fit rounded-full border border-slate-700 bg-slate-900 px-4 py-1.5 text-sm font-medium text-slate-400">
-                  {item.period}
-                </span>
-
               </div>
+            ))}
 
-              <p className="mt-5 max-w-3xl leading-8 text-slate-400">
-                {item.description}
-              </p>
-            </div>
-          ))}
-
+          </div>
         </div>
 
       </div>
