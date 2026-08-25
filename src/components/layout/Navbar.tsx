@@ -7,86 +7,57 @@ function Navbar() {
     setIsOpen(false);
   };
 
-  return (
-    <header className="fixed left-0 top-0 z-50 w-full border-b border-slate-800 bg-slate-950/80 backdrop-blur-md">
-      <nav className="mx-auto max-w-7xl px-6 py-4">
+  const navItems = [
+    { label: "Home", href: "#home" },
+    { label: "About", href: "#about" },
+    { label: "Skills", href: "#skills" },
+    { label: "Education", href: "#education" },
+    { label: "Projects", href: "#projects" },
+    { label: "Contact", href: "#contact" },
+  ];
 
-        <div className="flex items-center justify-between">
+  return (
+    <header className="fixed left-0 top-0 z-50 w-full border-b border-slate-800/80 bg-slate-950/80 backdrop-blur-xl">
+      <nav className="mx-auto max-w-7xl px-6">
+
+        <div className="flex h-20 items-center justify-between">
 
           {/* Logo */}
           <a
             href="#home"
             onClick={closeMenu}
-            className="text-xl font-bold text-cyan-400 transition hover:text-cyan-300 md:text-2xl"
+            className="text-lg font-bold tracking-tight text-white transition hover:text-cyan-400 sm:text-xl"
           >
-            Mpumelelo Mbonambi
+            Mpumelelo
+            <span className="text-cyan-400">.</span>
           </a>
 
           {/* Desktop Navigation */}
-          <ul className="hidden items-center gap-7 text-sm text-slate-300 md:flex">
-            <li>
-              <a
-                href="#home"
-                className="transition hover:text-cyan-400"
-              >
-                Home
-              </a>
-            </li>
+          <div className="hidden items-center gap-8 md:flex">
 
-            <li>
-              <a
-                href="#about"
-                className="transition hover:text-cyan-400"
-              >
-                About
-              </a>
-            </li>
+            <ul className="flex items-center gap-7 text-sm text-slate-400">
+              {navItems.map((item) => (
+                <li key={item.href}>
+                  <a
+                    href={item.href}
+                    className="relative py-2 transition hover:text-white"
+                  >
+                    {item.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
 
-            <li>
-              <a
-                href="#skills"
-                className="transition hover:text-cyan-400"
-              >
-                Skills
-              </a>
-            </li>
+            {/* CV */}
+            <a
+              href="/Mpumelelo%20Mbonambi.pdf"
+              download
+              className="rounded-lg bg-cyan-500 px-5 py-2.5 text-sm font-semibold text-slate-950 transition duration-300 hover:-translate-y-0.5 hover:bg-cyan-400"
+            >
+              Download CV
+            </a>
 
-            <li>
-              <a
-                href="#education"
-                className="transition hover:text-cyan-400"
-              >
-                Education
-              </a>
-            </li>
-
-            <li>
-              <a
-                href="#projects"
-                className="transition hover:text-cyan-400"
-              >
-                Projects
-              </a>
-            </li>
-
-            <li>
-              <a
-                href="#contact"
-                className="transition hover:text-cyan-400"
-              >
-                Contact
-              </a>
-            </li>
-          </ul>
-
-          {/* Desktop CV */}
-          <a
-            href="/Mpumelelo-Mbonambi-CV.pdf"
-            download
-            className="hidden rounded-lg bg-cyan-500 px-5 py-2 font-semibold text-slate-950 transition hover:bg-cyan-400 md:block"
-          >
-            Download CV
-          </a>
+          </div>
 
           {/* Mobile Menu Button */}
           <button
@@ -101,73 +72,25 @@ function Navbar() {
 
         </div>
 
-        {/* Mobile Navigation */}
+        {/* Mobile Menu */}
         {isOpen && (
-          <div className="mt-4 border-t border-slate-800 pt-4 md:hidden">
+          <div className="border-t border-slate-800 py-4 md:hidden">
 
-            <ul className="flex flex-col gap-2 text-slate-300">
+            <ul className="flex flex-col gap-1">
 
-              <li>
-                <a
-                  href="#home"
-                  onClick={closeMenu}
-                  className="block rounded-lg px-4 py-3 transition hover:bg-slate-900 hover:text-cyan-400"
-                >
-                  Home
-                </a>
-              </li>
+              {navItems.map((item) => (
+                <li key={item.href}>
+                  <a
+                    href={item.href}
+                    onClick={closeMenu}
+                    className="block rounded-lg px-4 py-3 text-slate-300 transition hover:bg-slate-900 hover:text-cyan-400"
+                  >
+                    {item.label}
+                  </a>
+                </li>
+              ))}
 
-              <li>
-                <a
-                  href="#about"
-                  onClick={closeMenu}
-                  className="block rounded-lg px-4 py-3 transition hover:bg-slate-900 hover:text-cyan-400"
-                >
-                  About
-                </a>
-              </li>
-
-              <li>
-                <a
-                  href="#skills"
-                  onClick={closeMenu}
-                  className="block rounded-lg px-4 py-3 transition hover:bg-slate-900 hover:text-cyan-400"
-                >
-                  Skills
-                </a>
-              </li>
-
-              <li>
-                <a
-                  href="#education"
-                  onClick={closeMenu}
-                  className="block rounded-lg px-4 py-3 transition hover:bg-slate-900 hover:text-cyan-400"
-                >
-                  Education
-                </a>
-              </li>
-
-              <li>
-                <a
-                  href="#projects"
-                  onClick={closeMenu}
-                  className="block rounded-lg px-4 py-3 transition hover:bg-slate-900 hover:text-cyan-400"
-                >
-                  Projects
-                </a>
-              </li>
-
-              <li>
-                <a
-                  href="#contact"
-                  onClick={closeMenu}
-                  className="block rounded-lg px-4 py-3 transition hover:bg-slate-900 hover:text-cyan-400"
-                >
-                  Contact
-                </a>
-              </li>
-
-              <li className="pt-2">
+              <li className="pt-3">
                 <a
                   href="/Mpumelelo%20Mbonambi.pdf"
                   download
