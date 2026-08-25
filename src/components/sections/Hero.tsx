@@ -26,26 +26,27 @@ function Hero() {
           {/* Description */}
           <p className="mt-8 max-w-2xl text-lg leading-8 text-slate-400 md:text-xl">
             Computer Science and Information Technology graduate building
-            practical software solutions with a focus on full-stack
-            development, backend systems, testing, and data-driven
-            applications.
+            practical software solutions across full-stack development,
+            backend systems, testing, and data engineering.
           </p>
 
-          {/* Buttons */}
+          {/* Actions */}
           <div className="mt-10 flex flex-col gap-4 sm:flex-row">
 
             <a
               href="#projects"
               className="rounded-lg bg-cyan-500 px-7 py-3 text-center font-semibold text-slate-950 shadow-lg shadow-cyan-500/10 transition duration-300 hover:-translate-y-1 hover:bg-cyan-400"
             >
-              View My Projects
+              View Projects
             </a>
 
             <a
-              href="#contact"
+              href="/Mpumelelo Mbonambi.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
               className="rounded-lg border border-slate-700 px-7 py-3 text-center font-semibold text-white transition duration-300 hover:-translate-y-1 hover:border-cyan-400 hover:text-cyan-400"
             >
-              Get In Touch
+              View CV
             </a>
 
           </div>
@@ -96,6 +97,7 @@ function Hero() {
         <span className="text-xs uppercase tracking-[0.25em]">
           Scroll
         </span>
+
         <span className="mt-2 block text-center text-lg">
           ↓
         </span>
